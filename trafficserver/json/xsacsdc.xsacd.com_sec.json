@@ -1,0 +1,99 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": [
+			{
+				"enable": true,
+				"rule_id": "bebe01b8591121515bd9361ab31cae1f",
+				"action": 1,
+				"sensitivity": 2,
+				"sensitivity_limit": [
+					10000,
+					5000,
+					3000
+				]
+			},
+			{
+				"enable": true,
+				"rule_id": "54e051efa9352f039a6f9c37fcfd84bd",
+				"action": 1,
+				"sensitivity": 2,
+				"sensitivity_limit": [
+					10000,
+					5000,
+					3000
+				]
+			},
+			{
+				"enable": true,
+				"rule_id": "8273e17ba3eb4145aae4350d4c2e79df",
+				"action": 1,
+				"sensitivity": 2,
+				"sensitivity_limit": [
+					10000,
+					5000,
+					3000
+				]
+			}
+		]
+	},
+	"ManagedRules": [
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8beb83eeb1344f65912c6e7f0408e330",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8e766b8b6c46970fe40e4ee4210f2a67",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "ac9bbd6bdf4ebccaecaf151658c160d1",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "9d76a904f2c9e86f67628685a1e50c4b",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "5e7a372597e05322cb8812ffdefac827",
+			"action": 1
+		}
+	],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1620975075702345728",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1620975121046966272",
+			"expression": "(ip.geoip.continent eq \"EU\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1621038685375959040",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		}
+	]
+}

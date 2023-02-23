@@ -1,0 +1,54 @@
+{
+	"origin_host": "",
+	"domain": "",
+	"origin_connect_timeout": 30,
+	"bandwidth_limiting": 0,
+	"in_arrears": false,
+	"Cache": {
+		"ttl": 0,
+		"browser_ttl": 0,
+		"level": 0,
+		"max_size": 0,
+		"always_online": false,
+		"development_mode": false
+	},
+	"SpeedOptimization": {
+		"prefetch": false,
+		"AutoMinify": "",
+		"Compression": {
+			"enable": false,
+			"encoding_type": "",
+			"level": 0,
+			"min": 0,
+			"max": 0,
+			"content_types": []
+		}
+	},
+	"Network": {
+		"enable_redirect": false,
+		"enable_ipcountry": false,
+		"TrueClientIpHeader": {
+			"enable": false,
+			"value": ""
+		}
+	},
+	"Rules": {
+		"page_rules_count": 0,
+		"url_rewrite_rules_count": 0,
+		"request_headers_count": 0,
+		"response_headers_count": 0,
+		"add_visitor_location": false,
+		"remove_visitor_ip": false,
+		"remove_x_powered_by": false,
+		"add_security_headers": false,
+		"PageRules": [],
+		"UrlRewriteRules": [],
+		"RequestHeaderRules": [],
+		"ResponseHeaderRules": []
+	},
+	"CustomPages": {
+		"enable_origin_error_pages": false,
+		"pages": []
+	},
+	"Security": {}
+}

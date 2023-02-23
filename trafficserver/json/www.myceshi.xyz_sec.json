@@ -1,0 +1,28 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1615728951592751104",
+			"expression": "(ip.geoip.country eq \"CN\")",
+			"action": 0
+		},
+		{
+			"enable": true,
+			"rule_id": "1615729107641831424",
+			"expression": "(http.referer contains \"Firefox\")",
+			"action": 1
+		}
+	]
+}

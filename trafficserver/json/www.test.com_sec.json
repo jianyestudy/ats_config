@@ -1,0 +1,22 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8beb83eeb1344f65912c6e7f0408e330",
+			"action": 1
+		}
+	],
+	"CustomRules": []
+}

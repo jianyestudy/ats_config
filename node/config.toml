@@ -1,0 +1,81 @@
+dbPath = "/opt/ats/var/data.db"
+httpStatsPath = "/opt/ats/var/log/node/http.stats.log"
+initialization = false
+launchLock = "/opt/ats/var/node-launch.lock"
+negativeLog = "/opt/ats/var/log/node/negative.log"
+updateEnvironmentOption = ["ats_path=/opt/ats/bin"]
+
+[bbr]
+  addr = "http://192.168.2.197:8000/compile/bbr"
+  token = "aNTUaFj6GgWypzKG"
+
+[confOption]
+  IPResourcePath = "data_ip_20221008_world.dat"
+  additionRawCacheTimes = ["url_regex=.* scheme=http action=never-cache", "url_regex=.* scheme=https action=never-cache"]
+  atsRoot = "/opt/ats"
+  certOwnGid = -1
+  certOwnUid = -1
+  certPath = "ssl/cert"
+  logPipePath = "/opt/ats/var/log/trafficserver/report.pipe"
+  permanents = ["json/traffic_statistics.json"]
+  priPath = "ssl/pri"
+  remapAppendLines = []
+  reservedPort = [10000]
+  savePath = "/opt/ats/etc/configuration"
+  tsOriginConfigPath = "/opt/ats/etc/trafficserver"
+
+  [confOption.rabbitMqOption]
+    exchangeType = "direct"
+    queueName = "cdnNode_1625795306723479552"
+    rabbitExchangeName = "cdncf_node_event_ex_test_v2"
+    rabbitUrl = "amqp://admin:admin@192.168.2.235:5672"
+    routingKey = "cdnNode_1625795306723479552"
+
+  [confOption.unReloadableConf]
+    "records.config" = ["/^CONFIG\\s+proxy\\.config\\.http\\.server_ports/p", "/^CONFIG\\s+proxy\\.config\\.cache\\.ram_cache.size/p", "/^CONFIG\\s+proxy\\.config\\.cache\\.ram_cache_cutoff/p"]
+    "storage.config" = ["/^\\s*[^#]/p"]
+
+[heartOption]
+  addr = "http://srv-cdnmgr-manage-test-v2-8001.test.com/api/v1/node/heartbeat"
+  internal = 3
+
+[http]
+  accessLog = "/opt/ats/var/log/node/access.log"
+  accessToken = "CLMxsxf623@sdxs101"
+  allowList = ["192.168.2.184"]
+  listenAddr = ":10000"
+
+[log]
+  fileMaxSize = 10
+  logLevel = "info"
+  logPrefix = "/opt/ats/var/log/node/node.log"
+  printConsole = false
+
+[reportOption]
+  WAFLoggingPath = "/opt/ats/var/log/trafficserver/firewall.pipe"
+  levelDBPath = "/opt/ats/var/log-cache"
+  per10minute = "/opt/ats/var/log/node/per10.log"
+  pre1minute = "/opt/ats/var/log/node/per1m.log"
+  realFlowPath = "/opt/ats/var/log/trafficserver/traffic_statistics.pipe"
+  sendTimeoutForHttp = 10
+  unknownSiteFlows = "/opt/ats/var/log/node/unkown.site.flows.log"
+  upSatatUrl = "http://srv-cdnmgr-manage-test-v2-8001.test.com/api/v1/node/report"
+  upStatInterval = 1
+  uploadAddr = ""
+  uploadHttpUrl = "http://srv-cdndcs-dev-10009.dev.com/logs"
+  uploadUrl = ""
+  uploadWsUrl = ""
+
+[tsMgrOption]
+  AtsStartBeforeCommands = []
+  blackIpListFlushDuration = 5
+  checkIsRunningInternal = 5
+  ctlShellPath = "/opt/ats/bin/traffic_ctl"
+  launchShellCommand = "systemctl restart trafficserver.service"
+  launchShellPath = "/opt/ats/bin/trafficserver"
+  stopShellCommand = "systemctl stop trafficserver.service"
+
+  [[tsMgrOption.keepalive]]
+    isRunning = "systemctl status polycubed"
+    name = "polycubed"
+    restart = "systemctl restart polycubed; pcn-iptables-init-xdp"

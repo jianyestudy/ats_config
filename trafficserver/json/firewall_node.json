@@ -1,0 +1,4 @@
+{
+	"enable_firewall_node": true,
+	"WafNodeRules": []
+}

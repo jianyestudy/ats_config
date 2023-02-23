@@ -1,0 +1,26 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": true,
+		"AllowList": [
+			"1.xsfr.com"
+		],
+		"BlockList": [
+			"xsdvf.xxx.com"
+		],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1608342655857594368",
+			"expression": "(ip.src eq \"192.168.188.66\")",
+			"action": 1
+		}
+	]
+}

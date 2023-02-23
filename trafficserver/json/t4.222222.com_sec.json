@@ -1,0 +1,22 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1622415623759859712",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		}
+	]
+}

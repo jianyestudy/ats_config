@@ -1,0 +1,28 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1619623204198813696",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1619623233491832832",
+			"expression": "(ip.geoip.continent eq \"EU\")",
+			"action": 1
+		}
+	]
+}

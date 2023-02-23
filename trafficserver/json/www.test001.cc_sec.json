@@ -1,0 +1,76 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8beb83eeb1344f65912c6e7f0408e330",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8e766b8b6c46970fe40e4ee4210f2a67",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "ac9bbd6bdf4ebccaecaf151658c160d1",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "9d76a904f2c9e86f67628685a1e50c4b",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "5e7a372597e05322cb8812ffdefac827",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "d44aa32e8254d2c490d78cb211f7a63d",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "30c8649be83e506089a3de4d2cb5d784",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "0bc504c722fafdb21975e103f7f50767",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "81405232415ae5743c22660dc4c25a2e",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "970277c6be76828e3b969c55f59ca2f8",
+			"action": 1
+		}
+	],
+	"CustomRules": []
+}

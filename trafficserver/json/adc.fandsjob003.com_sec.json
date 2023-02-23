@@ -1,0 +1,46 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1615272333356830720",
+			"expression": "(http.user_agent eq \"UA\")",
+			"action": 0
+		},
+		{
+			"enable": true,
+			"rule_id": "1615272390390976512",
+			"expression": "(http.request.uri eq \"\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615277211361742848",
+			"expression": "(http.host eq \"DDD\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615320448650711040",
+			"expression": "(ip.geoip.continent eq \"EU\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615320504686612480",
+			"expression": "(ip.geoip.continent eq \"AS\")",
+			"action": 1
+		}
+	]
+}

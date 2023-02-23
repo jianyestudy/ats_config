@@ -1,0 +1,40 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": false,
+		"AllowList": [],
+		"BlockList": [],
+		"allow_empty": true
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1625820803377401856",
+			"expression": "(ip.geoip.country in {\"AF\", \"AL\", \"AD\", \"AO\" })",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1626474726543069184",
+			"expression": "(ip.geoip.continent eq \"EU\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1626474808080338944",
+			"expression": "(ip.geoip.continent eq \"AS\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1626474832726069248",
+			"expression": "(ip.geoip.continent eq \"OA\")",
+			"action": 1
+		}
+	]
+}

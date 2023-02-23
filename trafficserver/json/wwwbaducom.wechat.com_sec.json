@@ -1,0 +1,142 @@
+{
+	"security_level": 2,
+	"challenge_ttl": 30,
+	"RefererACL": {
+		"enable": true,
+		"AllowList": [
+			"www.baidu.com"
+		],
+		"BlockList": [
+			"www.baidu.com",
+			"www.jd.com"
+		],
+		"allow_empty": false
+	},
+	"DDos": {
+		"L7": []
+	},
+	"ManagedRules": [
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8beb83eeb1344f65912c6e7f0408e330",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"status": true,
+			"rule_id": "8e766b8b6c46970fe40e4ee4210f2a67",
+			"action": 1
+		}
+	],
+	"CustomRules": [
+		{
+			"enable": true,
+			"rule_id": "1615328614234984448",
+			"expression": "(ip.geoip.country eq \"CM\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614897260041080832",
+			"expression": "(http.referer eq \"好的\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614896106762670080",
+			"expression": "(ip.geoip.country eq \"BD\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898100269223936",
+			"expression": "(ip.geoip.country eq \"AD\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898146838581248",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898183937200128",
+			"expression": "(ip.geoip.country eq \"AO\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898229747388416",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898278518755328",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898345933803520",
+			"expression": "(ip.geoip.country eq \"AD\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898423184494592",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898459700105216",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614898508131733504",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614899241476427776",
+			"expression": "(http.host eq \"111\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614899399723323392",
+			"expression": "(http.host eq \"1\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1614899768650108928",
+			"expression": "(http.host eq \"1\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615258969830330368",
+			"expression": "(ip.geoip.country eq \"AL\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615326988367564800",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		},
+		{
+			"enable": true,
+			"rule_id": "1615625703330418688",
+			"expression": "(ip.geoip.country eq \"AF\")",
+			"action": 1
+		}
+	]
+}
